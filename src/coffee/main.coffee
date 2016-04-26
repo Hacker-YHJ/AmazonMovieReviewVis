@@ -154,6 +154,9 @@ select = (e) ->
     when 'tCount'
       color = colors.neon
       legend = 'legendNeon'
+    when 'num'
+      color = colors.neon
+      legend = 'legendNeon'
     else
       color = colors.warm
       legend = 'legendWarm'
