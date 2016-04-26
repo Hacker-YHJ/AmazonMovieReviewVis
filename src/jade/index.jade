@@ -1,0 +1,30 @@
+include template/_mixins.jade
+extends template/_default.jade
+
+block append css
+  +ex_css('http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext')
+block append hjs
+  +jsF('main.js')
+
+block contents
+  h1#title A visulization for Amazon Movie Reviews
+  //- .selectContainer
+  //-   label(for="view") View:
+  //-   select#selectView(name="view")
+  //-     option(value="heatmap") Heatmap
+  //-     option(value="flowchart") Flowchart
+      
+  .selectContainer
+    label(for="data") Data:
+    select#selectData(name="data") Data:
+      option(value="pScore") Positiveness
+      option(value="nScore") Negativeness
+      option(value="oScore") Objectiveness
+      option(value="score") Average score
+      option(value="help") Average helpfullness
+      option(value="tCount") Average word count
+  main
+  footer
+    | &copy; 2016 Made with ♥ by 
+    a#name(href="http://thomas-yang.me") Thomas Yang
+    
